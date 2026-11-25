@@ -33,7 +33,7 @@ from qqmusic_api.modules.login_utils import QRCodeLoginSession
 from qqmusic_api.modules.search import SearchType
 from qqmusic_api.modules.song import SongFileInfo, SongFileType
 
-DATA = Path(os.environ.get("DATA_DIR", "/tmp/private-data"))
+DATA = Path(os.environ.get("DATA_DIR", "private-data"))
 DATA.mkdir(parents=True, exist_ok=True, mode=0o700)
 ORIGINS = [o.strip() for o in os.environ.get("ALLOWED_ORIGINS", "").split(",") if o.strip()]
 
